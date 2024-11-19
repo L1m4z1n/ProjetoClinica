@@ -50,13 +50,12 @@ switch ($_REQUEST['acao']) {
         break;
 
     case 'excluir':
-        case 'cadastrar':
             $nome = $_POST['nome_medico'];
             $crm = $_POST['crm_medico'];
             $especialidade = $_POST['especialidade_medico'];
           
             $sql = "DELETE medico
-                   WHERE id_medico=".$_REQUEST["id_medico"];
+                   WHERE id_medico=".$_REQUEST['id_medico'];
     
                     $res = $conexao->query($sql);
     
